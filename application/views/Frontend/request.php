@@ -60,7 +60,7 @@
                                 <label  for="formGroupExampleInput2" class="form-label">Jemput Barang ?</label>
                                 <select  name="status" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option value="terkirim">tidak</option>
-                                    <option value="dijemput">Ya</option>
+                                    <option value="terkirim">Ya</option>
                                 </select>
                             </div>
                             <div class="mb-3">

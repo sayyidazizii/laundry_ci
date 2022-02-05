@@ -73,9 +73,9 @@ contributors to the CodeIgniter project and you, the CodeIgniter user.
 Cara Penggunaan/Step to use
 ***************
 
--  `Download Source code,ekstrak di file htdocs.
--  `Import database laundry.sql *didalam file yang telah didownload
--  `Ubah config base url menjadi http://localhost/laundry_ci/
--  `Ubah config/database sesuai nama database
--  `Akses halaman Pelanggan 		http://localhost/laundry_ci/
--  `Akses halaman Admin,Kasir		http://localhost/laundry_ci/Dasboard
+-  Download Source code,ekstrak di file htdocs.
+-  Import database laundry.sql *didalam file yang telah didownload
+-  Ubah config base url menjadi http://localhost/laundry_ci/
+-  Ubah config/database sesuai nama database
+-  Akses halaman Pelanggan 		http://localhost/laundry_ci/
+-  Akses halaman Admin,Kasir		http://localhost/laundry_ci/Dasboard

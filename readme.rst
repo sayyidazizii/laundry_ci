@@ -68,3 +68,14 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+***************
+Cara Penggunaan/Step to use
+***************
+
+1.Download Source code,ekstrak di file htdocs.
+2.Import database laundry.sql *didalam file yang telah didownload
+3.Ubah config base url menjadi http://localhost/laundry_ci/
+4.Ubah config/database sesuai nama database
+5.Akses halaman Pelanggan 		http://localhost/laundry_ci/
+6.Akses halaman Admin,Kasir		http://localhost/laundry_ci/Dasboard

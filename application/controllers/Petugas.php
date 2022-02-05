@@ -17,7 +17,7 @@ class Petugas extends CI_Controller {
 	{
             $user = $this->M_user->data();
             $data = array('user' => $user);
-            $this->load->view('User/petugas',$data);
+            $this->load->view('Backend/petugas',$data);
 	}
     public function TambahPetugas()
     {
@@ -40,7 +40,7 @@ class Petugas extends CI_Controller {
 	{
 		$querypetugas = $this->M_user->getDataUser($id);
 		$DATA = array('querypetugas' => $querypetugas);
-		$this->load->view('User/edit_petugas',$DATA);
+		$this->load->view('Backend/edit_petugas',$DATA);
 	}
 
     public function EditPetugas()

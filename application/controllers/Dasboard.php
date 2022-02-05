@@ -30,8 +30,7 @@ class Dasboard extends CI_Controller {
 			'pesanan' => $pesanan
 		);
 
-		$this->load->view('User/dasboard',$data);
-		// $this->load->view('User/dasboard');
+		$this->load->view('Backend/dasboard',$data);
 	}
 
 }

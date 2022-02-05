@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Laundry[frontend]</title>
+        <title>Laundry-Member-Page</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontend/assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -71,7 +71,14 @@
                                 <label hidden for="formGroupExampleInput2" class="form-label">Kembali</label>
                                     <input hidden type="text"  name="tgl_kembali" class="form-control" id="formGroupExampleInput2" placeholder="" readonly>
                             </div>
-                                <button type="submit" class="btn btn-primary">Pesan</button>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-primary">Pesan</button>
+                                        </div>
+                                        <div class="col-sm-3 mt-2">
+                                        <a class="text-primary" href="<?php echo site_url()?>/Frontend/paket">Batal</a>
+                                    </div>
+                                </div>
                             </form>
                                 </div>
                                 <div class="card-footer text-muted">

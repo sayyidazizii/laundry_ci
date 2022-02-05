@@ -17,12 +17,7 @@
                 <?php $pesan = $this->session->flashdata('pesan');?>
                 <?php if ($pesan):?>
                     <div class="alert alert-danger">
-                        <strong>Registrasi Gagal!</strong>Username Sudah Ada!
-                    </div>
-                <?php endif?>
-                <?php if (isset($pesan)):?>
-                    <div class="alert alert-success">
-                        <strong>Register Berhasil!</strong>silahkan login
+                        <strong>Registrasi Gagal!</strong>Username atau Password Sudah Ada!
                     </div>
                 <?php endif?>
                 <div class="mb-3">

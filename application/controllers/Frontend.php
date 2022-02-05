@@ -55,6 +55,42 @@ class Frontend extends CI_Controller {
         $this->session->sess_destroy();
         redirect('Frontend');
     }
+    public function signup()
+	{
+        
+		$this->load->view('Frontend/register');
+	}
+
+    //register pelanggan
+    function Regis()
+    {
+        $nama        =   $this->input->post('nama');
+        $email       =   $this->input->post('email');
+        $password    =   $this->input->post('password');
+        $alamat      =   $this->input->post('alamat');
+        $nohp        =   $this->input->post('nohp');
+        
+
+
+        if($this->M_frontend->validasi($nama,$email) == true){
+
+            $this->session->set_flashdata('pesan','Username atau pasword sudah ada');
+            redirect('Frontend/signUp');
+            exit;
+        }else{
+            echo "registrasi Berhasil";
+            $ArrInsert = array(
+                'nama' => $nama,
+                'email ' => $email ,
+                'password'=> $password,
+                'alamat' => $alamat,
+                'nohp ' => $nohp 
+                
+            );
+            $this->M_frontend->insertuser($ArrInsert);
+            redirect('Frontend');
+        }
+    }
 
     //dapatkan data pesanan ambil dari model pesanan
     public function pesanan($id_pelanggan)

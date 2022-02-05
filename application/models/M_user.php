@@ -25,6 +25,21 @@ class M_user extends CI_Model {
             }
             exit;
     }
+    //validasi saat register
+    public function validasi($username,$email)
+    {
+        $query = $this->db->get_where($this->table,
+        array('username' => $username,
+                'email'   =>  $email)
+            );
+            
+            if($query->num_rows() > 0){
+                return true;
+            }else{
+                return false;
+            }
+            exit;
+    }
 
     // dapatkan petugas berdasar email
     function get_by_email($email)

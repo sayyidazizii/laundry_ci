@@ -69,7 +69,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div> -->
                                     <div class="text-center">
-                                        <a class="small text-left" href="register.html">Create an Account!</a>
+                                        <a class="small text-left" href="<?php echo base_url('Frontend/signUp')?>">Create an Account!</a>
                                         <span>_________</span>
                                         <a class="small text-right" href="<?php echo base_url('Home')?>">Sebagai Pengunjung</a>
                                     </div>

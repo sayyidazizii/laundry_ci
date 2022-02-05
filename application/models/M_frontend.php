@@ -25,8 +25,25 @@ class M_frontend extends CI_Model {
             }
             exit;
     }
+    //validasi pelanggan register
+    public function validasi($nama,$email)
+    {
+        $query = $this->db->get_where($this->table,
+        array('nama'    =>  $nama,
+              'email'   =>  $email
+              )
+            );
+            
+            if($query->num_rows() > 0){
+                return true;
+            }else{
+                return false;
+            }
+            exit;
+    }
 
-    // dapatkan user berdasar email
+
+    // dapatkan pelanggan berdasar email
     function get_by_email($email)
     {
         $this->db->where('email',$email);

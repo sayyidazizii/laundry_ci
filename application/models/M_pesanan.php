@@ -55,4 +55,14 @@ class M_pesanan extends CI_Model {
     {
         return $this->db->get('pesanan')->num_rows();
     }
+    //paginasi
+    public function getDataPagination($limit, $offset)
+    {
+        $this->db->select('*');
+        $this->db->from('pesanan');
+        $this->db->order_by('id_pesanan', 'ASC');
+        $this->db->limit($limit, $offset);
+
+        return $this->db->get();
+    }
 }

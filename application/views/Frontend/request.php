@@ -65,7 +65,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Alamat </label>
-                                <input type="text"  name="alamat" value="<?php echo($this->session->userdata('alamat'))?>" class="form-control" id="formGroupExampleInput2" placeholder="" readonly>
+                                <input type="text"  name="alamat" value="<?php echo($this->session->userdata('alamat'))?>" class="form-control" id="formGroupExampleInput2" placeholder="" required>
                             </div>
                             <div class="mb-3">
                                 <label hidden for="formGroupExampleInput2" class="form-label">Kembali</label>

@@ -95,8 +95,8 @@
                                 <label for="formGroupExampleInput2" class="form-label">Status</label>
                                 <select  name="status" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option value="terkirim">Terkirim</option>
-                                    <option value="dijemput">Ambil</option>
-                                    <option value="proses">Sudah Diambil</option>
+                                    <option value="dijemput">Jemput</option>
+                                    <option value="proses">Sudah Dijemput</option>
                                     <option value="selesai">Selesai</option>
                                 </select>
                                 <span class="badge bg-danger text-light">* Ubah status Pesanan</span>

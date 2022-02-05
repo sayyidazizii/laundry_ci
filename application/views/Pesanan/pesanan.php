@@ -100,10 +100,10 @@
                                 <td>Rp.<?php echo  $row->harga * $row->jumlah?></td>
                                 <td>
                                     <?php if ($row->status == 'terkirim'){?>
-                                    <p class="text-light badge bg-primary"><?php echo  $row->status?></p>
+                                    <p class="text-light badge bg-secondary"><?php echo  $row->status?></p>
                                     <?php }?>
                                     <?php if ($row->status == 'dijemput'){?>
-                                    <p class="text-light badge bg-secondary">minta <?php echo  $row->status?></p>
+                                    <p class="text-light badge bg-primary"><?php echo  $row->status?></p>
                                     <?php }?>
                                     <?php if ($row->status == 'proses'){?>
                                     <p class="text-light badge bg-warning"><?php echo  $row->status?></p>
@@ -119,12 +119,12 @@
 
                             <?php if ($_SESSION['level'] == 'A' or $_SESSION['level'] == 'K'){?>
                                 <?php if ($row->status == 'terkirim'){?>
-                                <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-primary"><i
-                                class="fas fa-dollar-sign  fa-sm text-white-50"></i></button></a>
-                                <?php }?>
-                                <?php if ($row->status == 'dijemput'){?>
                                 <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-secondary"><i
                                 class="fas fa-motorcycle  fa-sm text-white-50"></i></button></a>
+                                <?php }?>
+                                <?php if ($row->status == 'dijemput'){?>
+                                <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-primary"><i
+                                class="fas fa-dollar-sign  fa-sm text-white-50"></i></button></a>
                                 <?php }?>
                                 <?php if ($row->status == 'proses'){?>
                                 <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-warning"><i

@@ -24,12 +24,12 @@
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
+    <div class="container" style="position:relative;margin-top:5%">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-5 col-lg-10 col-md-9">
+            <div class="col-xl-5 col-lg-10 col-md-10">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">

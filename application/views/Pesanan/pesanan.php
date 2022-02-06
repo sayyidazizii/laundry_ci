@@ -57,8 +57,19 @@
                         <h1 class="h3 mb-0 text-gray-800">Pesanan Laundry</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                                
                     </div>
                     <!-- Content Row -->
+                     
+                    <div class="container-md">
+                    <table class="table caption-top">
+                        <div class="caption mb-3">
+                            <!-- Button trigger modal tambah paket -->
+                                <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#ModalPetunjuk">
+                                    Petunjuk Sistem
+                                    <i class="fas fa-question fa-sm fa-fw mr-2 text-gray-400"></i>
+                                </a>
+                        </div>
                    
                     <div class="container-md">
                     <table class="table caption-top">
@@ -122,16 +133,16 @@
                                 <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-secondary"><i
                                 class="fas fa-motorcycle  fa-sm text-white-50"></i></button></a>
                                 <?php }?>
-                                <?php if ($row->status == 'dijemput'){?>
-                                <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-primary"><i
+                                <?php if ($row->status == 'proses'){?>
+                                <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-success"><i
                                 class="fas fa-dollar-sign  fa-sm text-white-50"></i></button></a>
                                 <?php }?>
-                                <?php if ($row->status == 'proses'){?>
+                                <?php if ($row->status == 'dijemput'){?>
                                 <td><a href="<?php echo base_url('/Pesanan/halaman_edit') ?>/<?php echo $row->id_pesanan ?>"><button type="button" class="btn btn-warning"><i
                                 class="fas fa-pen fa-sm text-white-50"></i></button></a>
                                 <?php }?>
                                 <?php if ($row->status == 'selesai'){?>
-                                <td><a href="<?php echo base_url('/Pesanan/index') ?>"><button type="button" class="btn btn-success"><i
+                                <td><a href="<?php echo base_url('/Pesanan/index') ?>"><button type="button" class="btn btn-primary"><i
                                 class="fas fa-box fa-sm text-white-50"></i></button></a>
                                 <?php }?>
                             <?php }?>
@@ -205,49 +216,56 @@
   
 
          <!-- Modal tambah Paket -->
-<!-- <div class="modal fade" id="ModalPaket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         <div class="modal fade" id="ModalPetunjuk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Pesanan Baru</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Petunjuk Peggunaan Sistem</h5>
             </div>
                     <div class="modal-body">
                           <div class="mb-3">
-                          <form action="" method="post">
-                                <div class="mb-3">
-                                <label  for="formGroupExampleInput" class="form-label">Id Pelanggan</label>
-                                <input type="text" name="id_pelanggan" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+                                <label for="formGroupExampleInput" class="form-label"><span class="text-danger">1.</span>Ketika Pesanan Pelanggan berhasil masuk kedalam sistem maka status nya adalah <span  class="text-light badge bg-primary">terkirim</span></label>
                             </div>
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Paket</label>
-                                <input type="text" name="id_paket" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+                                <label for="formGroupExampleInput2" class="form-label"><span class="text-danger">2.</span>jika status pesanan nya adalah <span  class="text-light badge bg-primary">terkirim</span>,silahkan cek barang apakah barang dijemput atau belum,jika sudah di jemput ubah status menjadi <span  class="text-light badge bg-secondary">di jemput</span></label>
                             </div>
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Jumlah</label>
-                                    <input type="text"  name="jumlah" class="form-control" id="formGroupExampleInput2" placeholder="" required >
+                                <label for="formGroupExampleInput2" class="form-label"><span class="text-danger">3.</span>Saat Status Pesanan <span  class="text-light badge bg-secondary">di jemput</span>,ubah lah pesanan menjadi di <span  class="text-light badge bg-warning">proses</span></label>
                             </div>
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Harga Perkilo</label>
-                                <input type="text" name="harga"  class="form-control" id="formGroupExampleInput2" placeholder="" required>
+                                <label for="formGroupExampleInput2" class="form-label"><span class="text-danger">4.</span>Ketika Proses sudah selesai,Timbang Berat pesanan dengan timbangan,Setelah itu edit pesanan dan masukan berat timbangan serta samakan id paket dan tanggal kembali</label>
                             </div>
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Status</label>
-                                <select name="status"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                    <option value="proses">Proses</option>
-                                    <option value="selesai">Selesai</option>
-                                </select>
+                                <label for="formGroupExampleInput2" class="form-label"><span class="text-danger">5.</span>Setelah Proses selesai dan pesanan telah dibayar,ubahlah status menjadi <span  class="text-light badge bg-success">selesai</span></label>
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Kembali</label>
-                                    <input type="text" name="tgl_kembali" class="form-control" id="formGroupExampleInput2" placeholder="" required>
-                            </div>
-                                <button type="submit" class="btn btn-primary">simpan</button>
-                            </form>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-secondary"><i
+                                class="fas fa-motorcycle  fa-sm text-white-50"></i>jemput</button></a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-warning"><i
+                                class="fas fa-pen fa-sm text-white-50"></i>Proses</button></a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-success"><i
+                                class="fas fa-dollar-sign  fa-sm text-white-50"></i>Hitung</button></a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-primary"><i
+                                class="fas fa-box fa-sm text-white-50"></i>Selesai</button></a>
+                                </div>
+                                <?php if ($_SESSION['level'] == 'A'){?>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-danger"><i
+                                class="fas fa-trash fa-sm text-white-50"></i>Delete</button></a>
+                                </div>
+                                <?php } ?>
                             </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">close</button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
